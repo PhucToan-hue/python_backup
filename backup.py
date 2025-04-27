@@ -73,7 +73,7 @@ def perform_backup():
     print(f"[{now}] Đã hoàn tất quá trình backup.")
 
 def start_scheduler():
-    schedule.every().day.at("00:00").do(perform_backup)
+    schedule.every().day.at("22:50").do(perform_backup)
     print(" Lịch trình backup đã được thiết lập. Đang chờ đến giờ...")
     while True:
         schedule.run_pending()
